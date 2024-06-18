@@ -28,7 +28,6 @@
       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
     </ul>
   </nav>
-
     <div class="content">
       <div class="textbox">
         <h2>Basta Takoyaki <br> <span>DOKI DOKI</span></h2>
@@ -36,18 +35,18 @@
         <button class="login-btn" onclick="openLoginPopup()">LOGIN</button>
       </div>
       <div class="imgBox">
-        <img src="tako1.png" class="doki">
+        <img src="thumb2.png" id="imgBox">
       </div>
     </div>
 
     <ul class="thumb">
-      <li><img src="thumb2.png" onclick="imgSlider ('thumb2.png')"></li>
-      <li><img src="tako1.png" onclick="imgSlider ('tako1.png')"></li>
-      <li><img src="thumb3.png" onclick="imgSlider ('thumb3.png')"></li>
+      <li><img src="thumb2.png" id="img1" onclick="changeImage1()"></li>
+      <li><img src="tako1.png"  id="img2" onclick="changeImage2()"></li>
+      <li><img src="thumb3.png" id="img3" onclick="changeImage3()"></li>
     </ul>
-
-    <div class="form-popup" id="loginPopup">
     <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+   
       <span class="close-btn material-symbols-rounded">close</span>
       <div class="form-box login">
         <div class="form-details">
@@ -109,6 +108,15 @@
     </div>
 
   <script>
+    function changeImage1(){
+      document.getElementById('imgBox').src="thumb2.png";
+    }
+    function changeImage2(){
+      document.getElementById('imgBox').src="tako1.png";
+    }    
+    function changeImage3(){
+      document.getElementById('imgBox').src="thumb3.png";
+    }
     function showSidebar(){
       const sidebar = document.querySelector('.sidebar')
       sidebar.style.display = 'flex'

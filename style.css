@@ -177,9 +177,9 @@ nav li:first-child{
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
-  backdrop-filter: (5px);
+  backdrop-filter: blur(5px);
   transition: 0.1s ease;
 }
 
@@ -188,9 +188,6 @@ nav li:first-child{
   pointer-events: auto;
 }
 
-body.show-popup .form-popup {
-  display: block;
-}
 
 .form-popup {
   display: flex;
@@ -211,6 +208,7 @@ body.show-popup .form-popup {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.1s;
 }
 
 
@@ -339,7 +337,7 @@ form button:hover {
   text-align: center;
 }
 
-.form-popup .signup
+.form-popup .signup,
 .form-popup.show-signup .login {
   display: none;
 }
